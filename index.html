@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduLearn offers online courses and needs to identify students at risk of dropping out. Can they use classification models to predict and intervene with struggling students?</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Edulearn Student dropout Risk Prediction</h1>
+        <form action="/" method="post">
+            <label for="student_id">Enter Student ID:</label>
+            <input type="text" id="student_id" name="student_id" required>
+            <button type="submit">Predict</button>
+        </form>
+        <div class="result">
+            {% if result %}
+                <p>{{ result }}</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
